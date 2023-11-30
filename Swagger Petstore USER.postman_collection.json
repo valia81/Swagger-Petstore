@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "6dff9a68-544d-49cb-ab0b-871e1dcad54a",
+		"name": "Swagger Petstore USER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25164625"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Athens",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "maria",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "magdalena",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "aaaaa5@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "987654321",
+							"type": "text"
+						},
+						{
+							"key": "userStatus",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Athens",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/login",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/AthensRuns",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 100,\n    \"username\": \"Athens\",\n    \"firstName\": \"maria\",\n    \"lastName\": \"magdalena\",\n    \"email\": \"aaaaa5@mail.ru\",\n    \"password\": \"12345\",\n    \"phone\": \"987654321\",\n    \"userStatus\": 123\n}"
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/AthensRuns",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"AthensRuns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/createWithList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"id\": 12,\n    \"username\": \"Paris\",\n    \"firstName\": \"Lolita\",\n    \"lastName\": \"Rouseau\",\n    \"email\": \"Lolita12@gmail.com\",\n    \"password\": \"123456\",\n    \"phone\": \"9876543210\",\n    \"userStatus\": 20\n  }\n]"
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/createWithList",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"createWithList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/Athens",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/Athens",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"Athens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/createWithArray",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"id\": 34,\n    \"username\": \"Sofia\",\n    \"firstName\": \"Anika\",\n    \"lastName\": \"Stoiceva\",\n    \"email\": \"stoiceva@mail.ru\",\n    \"password\": \"12321\",\n    \"phone\": \"98725644162\",\n    \"userStatus\": 100\n  }\n]"
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/createWithArray",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"createWithArray"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/logout",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/Athens",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/Athens",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"Athens"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
